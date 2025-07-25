@@ -493,7 +493,7 @@ export default function CombinationSumVisualizer() {
     executionTime: 0,
   })
   const [showCode, setShowCode] = useState(false)
-  const [solutions, setSolutions] = useState(0)
+  const [solutions, setSolutions] = useState<number>(0)
   const [zoomLevel, setZoomLevel] = useState(1)
 
   const timerRef = useRef<NodeJS.Timeout | null>(null)
