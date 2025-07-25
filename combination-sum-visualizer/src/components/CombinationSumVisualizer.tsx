@@ -394,7 +394,7 @@ const TreeNodeComponent = ({
   )
 }
 
-const StatsPanel = ({ stats, solutions: _solutions }: { stats: VisualizationStats; solutions: number[] }) => (
+const StatsPanel = ({ stats, solutions: _solutions }: { stats: VisualizationStats; solutions: number }) => (
   <div className="bg-gray-50 border border-gray-200 p-4 rounded-lg">
     <h3 className="font-bold text-gray-800 mb-3 text-sm">Statistics</h3>
     <div className="grid grid-cols-2 gap-3 text-sm">
