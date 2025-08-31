@@ -16,17 +16,17 @@ export default function SudokuApp() {
     sudoku.mode === "play" &&
     !sudoku.playing
 
-  const handleDigit = (n: number) => {
+  const _handleDigit = (n: number) => {
     if (!sudoku.selected || !selectedEditable) return
     sudoku.handleInput(sudoku.selected.r, sudoku.selected.c, n)
   }
 
-  const handleErase = () => {
+  const _handleErase = () => {
     if (!sudoku.selected || !selectedEditable) return
     sudoku.handleInput(sudoku.selected.r, sudoku.selected.c, null)
   }
 
-  const validateThenSolve = () => {
+  const _validateThenSolve = () => {
     sudoku.validateNow()
     if (isBoardValid(sudoku.board)) {
       sudoku.instantSolve()

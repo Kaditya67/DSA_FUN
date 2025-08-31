@@ -16,7 +16,7 @@ export function cloneBoard(b: Board): Board {
   return b.map((row) => row.slice())
 }
 
-export function toHighlights(b: Board): Highlights {
+export function toHighlights(_b: Board): Highlights {
   const h = Array.from({ length: 9 }, () => Array(9).fill("none")) as Highlights
   return h
 }

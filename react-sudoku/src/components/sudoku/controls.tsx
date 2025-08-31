@@ -129,7 +129,7 @@ function ValidityBadge({ state }: { state: "unknown" | "valid" | "invalid" | "so
   return <span className={`${base} text-blue-700 bg-blue-100`}>Status: Solved</span>
 }
 
-function LegendItem({ color, label }: { color: string; label: string }) {
+function _LegendItem({ color, label }: { color: string; label: string }) {
   return (
     <li className="flex items-center gap-2">
       <span className={`h-4 w-4 rounded ${color}`} aria-hidden />
