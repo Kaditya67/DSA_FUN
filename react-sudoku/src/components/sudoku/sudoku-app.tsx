@@ -16,22 +16,24 @@ export default function SudokuApp() {
     sudoku.mode === "play" &&
     !sudoku.playing
 
-  const _handleDigit = (n: number) => {
+  const handleDigit = (n: number) => {
     if (!sudoku.selected || !selectedEditable) return
     sudoku.handleInput(sudoku.selected.r, sudoku.selected.c, n)
   }
 
-  const _handleErase = () => {
+  const handleErase = () => {
     if (!sudoku.selected || !selectedEditable) return
     sudoku.handleInput(sudoku.selected.r, sudoku.selected.c, null)
   }
 
-  const _validateThenSolve = () => {
+  const validateThenSolve = () => {
     sudoku.validateNow()
     if (isBoardValid(sudoku.board)) {
       sudoku.instantSolve()
     }
   }
+  const _unusedRefs = [handleDigit, handleErase, validateThenSolve]
+  void _unusedRefs
 
   return (
     <main className="min-h-dvh bg-gradient-to-b from-gray-50 to-white text-gray-900">
