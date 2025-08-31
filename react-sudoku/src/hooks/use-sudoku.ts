@@ -70,8 +70,10 @@ export function useSudoku() {
   }, [board, applyHighlights])
 
   const generatePuzzleCb = useCallback(() => {
-    const d =
-      difficulty === "random" ? (["easy", "medium", "hard"][Math.floor(Math.random() * 3)] as Difficulty) : difficulty
+    const d: "easy" | "medium" | "hard" =
+  difficulty === "random"
+    ? (["easy", "medium", "hard"][Math.floor(Math.random() * 3)] as "easy" | "medium" | "hard")
+    : difficulty;
     const { puzzle: p } = generatePuzzle(d)
     setPuzzle(p)
     setBoard(cloneBoard(p))
